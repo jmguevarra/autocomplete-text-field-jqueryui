@@ -1,0 +1,59 @@
+/*
+ * All styling is in this file
+ * Contents:
+ * - Fonts
+ * - Page styling
+ * - Form Styling
+ * - Media Queries
+ */
+
+ /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Page Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans' , sans-serif;
+}
+
+
+/* Form Styling */
+input, textarea, 
+select{
+    font-family: 'Open Sans' , sans-serif;
+    color:#000;
+}
+.register-form .single{
+    padding: 5px 12px;
+    font-size: 16px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+::placeholder{
+    color: rgb(0 0 0 / 40%);
+}
+::-moz-placeholder{
+    color: rgb(0 0 0 / 40%);
+}
+::-webkit-input-placeholder{
+    color: rgb(0 0 0 / 40%);
+}
+.field_validated{
+    border:1px solid springgreen;
+    box-shadow: inset 0 0 10px 1px rgb(0 255 127 / 20%);
+    -webkit-box-shadow: inset 0 0 10px 1px rgb(0 255 127 / 20%);
+    -moz-box-shadow: inset 0 0 10px 1px rgb(0 255 127 / 20%);
+}
+.field_error {
+    border: 1px solid red;
+    box-shadow: inset 0 0 10px 1px rgb(255 0 0 / 20%);
+    -webkit-box-shadow: inset 0 0 10px 1px rgb(255 0 0 / 20%);
+    -moz-box-shadow: inset 0 0 10px 1px rgb(255 0 0 / 20%);
+}
+
+/* Media Queries */
