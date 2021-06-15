@@ -3860,6 +3860,7 @@ var listedSchools = [
 
 jQuery(document).ready(function(){
     const checkSchool = function(school){
+        let flag = false;
         if(school === ''){ return false; } //return if empty
 
         //Do action here
@@ -3867,23 +3868,32 @@ jQuery(document).ready(function(){
             return elem == school;
         });
 
-        if( schoolExistence  !== undefined ){
-            //the given user is listed there
-            console.log(schoolExistence);
+        if(schoolExistence !== undefined){
             $('input[name="school"]').addClass('field_validated');
             $('input[name="school"]').removeClass('field_error');
+            flag = true;
         }else{
             $('input[name="school"]').addClass('field_error');
             $('input[name="school"]').removeClass('field_validated');
         }
-
+        return flag;
     };
 
     $('input[name="school"]').autocomplete({
         source: listedSchools,
     });
-    $('input[name="school"]').blur(function(e){
-        checkSchool($(this).val());
+    // $('input[name="school"]').blur(function(e){
+    //     checkSchool($(this).val());
+    // });
+
+    $('.register-form').submit(function(e){
+        const schoolValue = $('input[name="school"]').val();
+
+        if(!checkSchool(schoolValue)){
+            e.preventDefault();
+            return false;
+        }
+        
     });
 });
 
