@@ -19,6 +19,22 @@
 
 body{
     font-family: 'Open Sans' , sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #414141;
+}
+
+.form-section {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: cornflowerblue;
+    width: 100%;
+    max-width: 670px;
+    margin: 100px auto 0;
+}
+.form-section h1 {
+    color: #fff;
+    margin-bottom: 25px;
 }
 
 
@@ -28,11 +44,22 @@ select{
     font-family: 'Open Sans' , sans-serif;
     color:#000;
 }
+.register-form .single.col2{
+    width: calc(50% - 14px);
+    display: inline-block;
+    
+}
 .register-form .single{
-    padding: 5px 12px;
+    width: calc(100% - 14px);
+    margin: 5px;
+}
+.register-form .single input,
+.register-form .single select{
     font-size: 16px;
     border-radius: 0;
     border: 1px solid #ccc;
+    padding: 5px 12px;
+    width: 100%;
 }
 ::placeholder{
     color: rgb(0 0 0 / 40%);
@@ -42,6 +69,27 @@ select{
 }
 ::-webkit-input-placeholder{
     color: rgb(0 0 0 / 40%);
+}
+input[type="submit"] {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 50px;
+    appearance: none;
+    box-shadow: none;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+input[type="submit"]:hover {
+    background-color: #000000;
+    box-shadow: inset 0 0 20px 10px rgb(255 255 255 / 25%);
+    color: #fff;
 }
 .field_validated{
     border:1px solid springgreen;
