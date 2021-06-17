@@ -3888,11 +3888,14 @@ jQuery(document).ready(function(){
 
     $('.register-form').submit(function(e){
         const schoolValue = $('input[name="school"]').val();
+        const confirmationLink  = '/pages/confirmation.html';
 
         if(!checkSchool(schoolValue)){
             e.preventDefault();
             return false;
         }
+        
+        $(this)[0].action = confirmationLink; 
         
     });
 });
